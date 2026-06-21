@@ -187,19 +187,6 @@ function HomePage() {
 
   return (
     <>
-      {/* Seasonal banner */}
-      <div className="relative z-40 bg-gradient-to-r from-safari via-navy to-ocean text-white">
-        <div className="container-px mx-auto flex max-w-7xl items-center justify-center gap-3 py-2.5 text-xs md:text-sm">
-          <Sparkles className="h-3.5 w-3.5 text-gold" />
-          <span className="text-white/90">
-            Limited season offer — <strong className="text-gold">Save 12%</strong> on Great Migration departures
-          </span>
-          <Link to="/safari-packages" className="underline-offset-4 hover:underline">
-            View dates →
-          </Link>
-        </div>
-      </div>
-
       {/* HERO */}
       <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden">
         {HERO_SLIDES.map((s, i) => (
@@ -219,7 +206,7 @@ function HomePage() {
         ))}
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy/70 via-navy/30 to-navy/80" />
 
-        <div className="container-px mx-auto w-full max-w-7xl pt-32 pb-40 text-white">
+        <div className="container-px mx-auto w-full max-w-7xl pt-40 pb-40 text-white">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted by travelers from 40+ countries
           </span>
