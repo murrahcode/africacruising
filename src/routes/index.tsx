@@ -40,8 +40,6 @@ export const Route = createFileRoute("/")({
 
 const HERO_SLIDES = [
   { img: IMG.heroSerengeti, label: "Serengeti, Tanzania" },
-  { img: IMG.heroZanzibar, label: "Zanzibar Island" },
-  { img: IMG.heroCruise, label: "Indian Ocean Cruise" },
 ];
 
 const PACKAGES = [
