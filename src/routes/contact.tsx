@@ -65,8 +65,8 @@ function Contact() {
               <div className="gold-divider my-3" />
               <ul className="space-y-3 text-sm text-white/85">
                 <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /> Arusha, Tanzania — gateway to the Serengeti</li>
-                <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> <a className="hover:text-gold" href="mailto:info@africacruising.com">info@africacruising.com</a></li>
-                <li className="flex items-start gap-2"><MessageCircle className="mt-0.5 h-4 w-4 text-gold" /> WhatsApp 24/7</li>
+                <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /> <span>General: <a className="hover:text-gold" href="mailto:info@africacruising.com">info@africacruising.com</a><br />Enquiries: <a className="hover:text-gold" href="mailto:enquiry@africacruising.com">enquiry@africacruising.com</a><br />Safaris: <a className="hover:text-gold" href="mailto:safari@africacruising.com">safari@africacruising.com</a></span></li>
+                <li className="flex items-start gap-2"><MessageCircle className="mt-0.5 h-4 w-4 text-gold" /> <a className="hover:text-gold" href="https://wa.me/255789937467" target="_blank" rel="noreferrer">WhatsApp: +255 789 937 467</a></li>
               </ul>
             </div>
 

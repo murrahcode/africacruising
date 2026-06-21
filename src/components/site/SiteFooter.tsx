@@ -79,7 +79,10 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <Phone className="mt-0.5 h-4 w-4 text-gold" /> WhatsApp 24/7
+                <Phone className="mt-0.5 h-4 w-4 text-gold" />
+                <a href="https://wa.me/255789937467" target="_blank" rel="noreferrer" className="hover:text-gold">
+                  +255 789 937 467
+                </a>
               </li>
             </ul>
 
