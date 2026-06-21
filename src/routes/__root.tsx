@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Premium African safaris, exotic beach holidays in Zanzibar, Bali & Phuket, and unforgettable luxury cruises. Tailor-made by trusted local experts in Arusha, Tanzania.",
       },
       { name: "author", content: "AfricaCruising.com" },
-      { property: "og:title", content: "AfricaCruising.com — Your Journey. Our Passion." },
+      { property: "og:title", content: "AfricaCruising.com — Luxury Safaris, Beach Holidays & Cruises" },
       {
         property: "og:description",
         content:
@@ -96,6 +96,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "AfricaCruising.com" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "AfricaCruising.com — Luxury Safaris, Beach Holidays & Cruises" },
+      { name: "description", content: "AfricaCruising.com is a premium travel website for luxury African safaris, beach holidays, and cruises." },
+      { property: "og:description", content: "AfricaCruising.com is a premium travel website for luxury African safaris, beach holidays, and cruises." },
+      { name: "twitter:description", content: "AfricaCruising.com is a premium travel website for luxury African safaris, beach holidays, and cruises." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bbb09a1d-4b03-4469-9388-2700417e2d70/id-preview-f87febe2--d5bfc375-7f3c-471d-8248-f59803c2a1d9.lovable.app-1782038114704.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bbb09a1d-4b03-4469-9388-2700417e2d70/id-preview-f87febe2--d5bfc375-7f3c-471d-8248-f59803c2a1d9.lovable.app-1782038114704.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
