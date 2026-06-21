@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown, Globe, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import logoLight from "@/assets/logo-light.png";
 
 type NavItem = { to: string; label: string; mega?: boolean };
@@ -11,7 +11,6 @@ const NAV: NavItem[] = [
   { to: "/safari-packages", label: "Safaris" },
   { to: "/holidays", label: "Holidays" },
   { to: "/cruises", label: "Cruises" },
-  { to: "/tailor-made", label: "Tailor-Made" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -74,22 +73,6 @@ export function SiteHeader() {
           : "bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80 shadow-soft"
       }`}
     >
-      {/* Seasonal promo strip */}
-      <div className="bg-gradient-to-r from-safari via-navy to-ocean text-white">
-        <div className="container-px mx-auto flex max-w-[1440px] items-center justify-center gap-3 py-2 text-xs md:text-sm">
-          <Sparkles className="h-3.5 w-3.5 shrink-0 text-gold" />
-          <span className="text-white/90">
-            Limited season offer — <strong className="text-gold">Save 12%</strong> on Great Migration departures
-          </span>
-          <Link
-            to="/safari-packages"
-            className="shrink-0 underline-offset-4 hover:underline"
-          >
-            View dates →
-          </Link>
-        </div>
-      </div>
-
       <div className="container-px mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-6">
         <Link to="/" className="flex shrink-0 items-center" aria-label="AfricaCruising home">
           <img src={logoLight} alt="AfricaCruising — Your Journey. Our Passion." className="h-9 w-auto md:h-10" />

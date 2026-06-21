@@ -206,7 +206,7 @@ function HomePage() {
         ))}
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy/70 via-navy/30 to-navy/80" />
 
-        <div className="container-px mx-auto w-full max-w-7xl pt-40 pb-40 text-white">
+        <div className="container-px mx-auto w-full max-w-7xl pt-32 pb-40 text-white">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted by travelers from 40+ countries
           </span>
