@@ -11,8 +11,6 @@ const NAV: NavItem[] = [
   { to: "/holidays", label: "Holidays" },
   { to: "/cruises", label: "Cruises" },
   { to: "/tailor-made", label: "Tailor-Made" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 

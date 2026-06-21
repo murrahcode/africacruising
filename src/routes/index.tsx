@@ -250,9 +250,11 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Smart search bar */}
-        <div className="absolute inset-x-0 bottom-0 z-10 translate-y-1/2">
-          <div className="container-px mx-auto max-w-6xl">
+      </section>
+
+      {/* Smart search bar */}
+      <div className="relative z-20 -mt-12 md:-mt-14">
+        <div className="container-px mx-auto max-w-6xl">
             <form
               onSubmit={(e) => e.preventDefault()}
               className="grid grid-cols-1 gap-3 rounded-2xl bg-white p-4 shadow-lux ring-1 ring-black/5 md:grid-cols-[1.3fr_1fr_1fr_auto] md:gap-2 md:p-3"
@@ -292,10 +294,9 @@ function HomePage() {
             </form>
           </div>
         </div>
-      </section>
 
       {/* Trust indicators */}
-      <section className="bg-sand-alt pt-32 pb-12">
+      <section className="bg-sand-alt pt-16 pb-12">
         <div className="container-px mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { Icon: MapPin, label: "Local Experts", desc: "Based in Arusha, Tanzania" },
