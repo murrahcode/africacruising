@@ -205,14 +205,14 @@ function HomePage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy/70 via-navy/30 to-navy/80" />
 
         <div className="container-px mx-auto w-full max-w-7xl pt-32 pb-40 text-white">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
+          <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted by travelers from 40+ countries
           </span>
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.05] md:text-7xl">
             Discover Africa &<br />
             <span className="text-gold">Exotic Destinations</span> in Style
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/85 md:text-xl">
+          <p className="mt-6 hidden max-w-xl text-lg text-white/85 sm:block md:text-xl">
             Luxury safaris, island escapes, and unforgettable cruise experiences — designed by your local experts in Arusha.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -230,7 +230,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-12 flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white/70">
+          <div className="mt-12 hidden items-center gap-2 text-xs uppercase tracking-[0.25em] text-white/70 sm:flex">
             {HERO_SLIDES.map((s, i) => (
               <button
                 key={s.label}
