@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Facebook, Instagram, Youtube, Award, ShieldCheck, Sparkles } from "lucide-react";
+import logoLight from "@/assets/logo-light.png";
 
 export function SiteFooter() {
   return (
@@ -7,12 +8,9 @@ export function SiteFooter() {
       <div className="container-px mx-auto max-w-7xl py-16">
         <div className="grid gap-12 lg:grid-cols-4">
           <div>
-            <Link to="/" className="font-display text-2xl font-bold tracking-tight">
-              <span className="text-white">AFRICA</span>
-              <span className="text-gold">CRUISING</span>
-              <span className="text-white">.com</span>
+            <Link to="/" className="inline-flex items-center" aria-label="AfricaCruising home">
+              <img src={logoLight} alt="AfricaCruising — Your Journey. Our Passion." className="h-12 w-auto" />
             </Link>
-            <p className="mt-2 text-sm italic text-gold">Your Journey. Our Passion.</p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
               Curating premium safaris, exotic beach holidays and luxury cruises across Africa and beyond — designed by local experts who live the journey every day.
             </p>

@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, Globe, Sparkles } from "lucide-react";
+import logoLight from "@/assets/logo-light.png";
 
 type NavItem = { to: string; label: string; mega?: boolean };
 const NAV: NavItem[] = [
@@ -90,12 +91,8 @@ export function SiteHeader() {
       </div>
 
       <div className="container-px mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-6">
-        <Link to="/" className="group flex shrink-0 items-center gap-2 text-white">
-          <span className="font-display text-2xl font-bold tracking-tight">
-            <span className="text-white">AFRICA</span>
-            <span className="text-gold">CRUISING</span>
-            <span className="text-white">.com</span>
-          </span>
+        <Link to="/" className="flex shrink-0 items-center" aria-label="AfricaCruising home">
+          <img src={logoLight} alt="AfricaCruising — Your Journey. Our Passion." className="h-9 w-auto md:h-10" />
         </Link>
 
         <nav className="hidden items-center gap-6 xl:flex">
