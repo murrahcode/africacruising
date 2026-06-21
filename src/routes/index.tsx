@@ -208,7 +208,7 @@ function HomePage() {
           <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Trusted by travelers from 40+ countries
           </span>
-          <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[1.05] md:text-7xl">
+          <h1 className="mt-6 max-w-4xl font-display text-4xl font-bold leading-[1.05] md:text-6xl">
             Discover Africa &<br />
             <span className="text-gold">Exotic Destinations</span> in Style
           </h1>
