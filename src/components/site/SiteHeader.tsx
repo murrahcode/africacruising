@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Sparkles } from "lucide-react";
 
 type NavItem = { to: string; label: string; mega?: boolean };
 const NAV: NavItem[] = [
@@ -75,8 +75,24 @@ export function SiteHeader() {
           : "bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80 shadow-soft"
       }`}
     >
-      <div className="container-px mx-auto flex h-20 max-w-7xl items-center justify-between gap-6">
-        <Link to="/" className="group flex items-center gap-2 text-white">
+      {/* Seasonal promo strip */}
+      <div className="bg-gradient-to-r from-safari via-navy to-ocean text-white">
+        <div className="container-px mx-auto flex max-w-[1440px] items-center justify-center gap-3 py-2 text-xs md:text-sm">
+          <Sparkles className="h-3.5 w-3.5 shrink-0 text-gold" />
+          <span className="text-white/90">
+            Limited season offer — <strong className="text-gold">Save 12%</strong> on Great Migration departures
+          </span>
+          <Link
+            to="/safari-packages"
+            className="shrink-0 underline-offset-4 hover:underline"
+          >
+            View dates →
+          </Link>
+        </div>
+      </div>
+
+      <div className="container-px mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-6">
+        <Link to="/" className="group flex shrink-0 items-center gap-2 text-white">
           <span className="font-display text-2xl font-bold tracking-tight">
             <span className="text-white">AFRICA</span>
             <span className="text-gold">CRUISING</span>
@@ -84,7 +100,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 xl:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           {NAV.map((item) =>
             item.mega ? (
               <div
@@ -95,7 +111,7 @@ export function SiteHeader() {
               >
                 <Link
                   to={item.to}
-                  className="nav-link inline-flex items-center gap-1 text-sm font-medium text-white/90 hover:text-white"
+                  className="nav-link inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium text-white/90 hover:text-white"
                   data-active={pathname.startsWith(item.to) || undefined}
                 >
                   {item.label}
@@ -135,7 +151,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="nav-link text-sm font-medium text-white/90 hover:text-white"
+                className="nav-link whitespace-nowrap text-sm font-medium text-white/90 hover:text-white"
                 data-active={
                   (item.to === "/" ? pathname === "/" : pathname.startsWith(item.to)) || undefined
                 }
@@ -146,7 +162,7 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <div className="hidden items-center gap-1 rounded-full border border-white/20 px-2 py-1 text-xs text-white/90 md:flex">
             <Globe className="h-3.5 w-3.5 text-gold" />
             {CURRENCIES.map((c) => (
@@ -164,7 +180,7 @@ export function SiteHeader() {
 
           <Link
             to="/tailor-made"
-            className="hidden rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-foreground shadow-soft transition hover:bg-gold-light hover:shadow-lux md:inline-flex"
+            className="hidden shrink-0 whitespace-nowrap rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-foreground shadow-soft transition hover:bg-gold-light hover:shadow-lux md:inline-flex"
           >
             Plan My Trip
           </Link>
