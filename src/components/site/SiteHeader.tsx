@@ -2,7 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
-const NAV = [
+type NavItem = { to: string; label: string; mega?: boolean };
+const NAV: NavItem[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/destinations", label: "Destinations", mega: true },
@@ -13,7 +14,7 @@ const NAV = [
   { to: "/gallery", label: "Gallery" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 const MEGA = [
   {
