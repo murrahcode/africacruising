@@ -9,8 +9,62 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TailorMadeRouteImport } from './routes/tailor-made'
+import { Route as SafariPackagesRouteImport } from './routes/safari-packages'
+import { Route as HolidaysRouteImport } from './routes/holidays'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as DestinationsRouteImport } from './routes/destinations'
+import { Route as CruisesRouteImport } from './routes/cruises'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TailorMadeRoute = TailorMadeRouteImport.update({
+  id: '/tailor-made',
+  path: '/tailor-made',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SafariPackagesRoute = SafariPackagesRouteImport.update({
+  id: '/safari-packages',
+  path: '/safari-packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HolidaysRoute = HolidaysRouteImport.update({
+  id: '/holidays',
+  path: '/holidays',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsRoute = DestinationsRouteImport.update({
+  id: '/destinations',
+  path: '/destinations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CruisesRoute = CruisesRouteImport.update({
+  id: '/cruises',
+  path: '/cruises',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +73,158 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cruises': typeof CruisesRoute
+  '/destinations': typeof DestinationsRoute
+  '/gallery': typeof GalleryRoute
+  '/holidays': typeof HolidaysRoute
+  '/safari-packages': typeof SafariPackagesRoute
+  '/tailor-made': typeof TailorMadeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cruises': typeof CruisesRoute
+  '/destinations': typeof DestinationsRoute
+  '/gallery': typeof GalleryRoute
+  '/holidays': typeof HolidaysRoute
+  '/safari-packages': typeof SafariPackagesRoute
+  '/tailor-made': typeof TailorMadeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cruises': typeof CruisesRoute
+  '/destinations': typeof DestinationsRoute
+  '/gallery': typeof GalleryRoute
+  '/holidays': typeof HolidaysRoute
+  '/safari-packages': typeof SafariPackagesRoute
+  '/tailor-made': typeof TailorMadeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cruises'
+    | '/destinations'
+    | '/gallery'
+    | '/holidays'
+    | '/safari-packages'
+    | '/tailor-made'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cruises'
+    | '/destinations'
+    | '/gallery'
+    | '/holidays'
+    | '/safari-packages'
+    | '/tailor-made'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cruises'
+    | '/destinations'
+    | '/gallery'
+    | '/holidays'
+    | '/safari-packages'
+    | '/tailor-made'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRoute
+  ContactRoute: typeof ContactRoute
+  CruisesRoute: typeof CruisesRoute
+  DestinationsRoute: typeof DestinationsRoute
+  GalleryRoute: typeof GalleryRoute
+  HolidaysRoute: typeof HolidaysRoute
+  SafariPackagesRoute: typeof SafariPackagesRoute
+  TailorMadeRoute: typeof TailorMadeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tailor-made': {
+      id: '/tailor-made'
+      path: '/tailor-made'
+      fullPath: '/tailor-made'
+      preLoaderRoute: typeof TailorMadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/safari-packages': {
+      id: '/safari-packages'
+      path: '/safari-packages'
+      fullPath: '/safari-packages'
+      preLoaderRoute: typeof SafariPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/holidays': {
+      id: '/holidays'
+      path: '/holidays'
+      fullPath: '/holidays'
+      preLoaderRoute: typeof HolidaysRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations': {
+      id: '/destinations'
+      path: '/destinations'
+      fullPath: '/destinations'
+      preLoaderRoute: typeof DestinationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cruises': {
+      id: '/cruises'
+      path: '/cruises'
+      fullPath: '/cruises'
+      preLoaderRoute: typeof CruisesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +237,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRoute,
+  ContactRoute: ContactRoute,
+  CruisesRoute: CruisesRoute,
+  DestinationsRoute: DestinationsRoute,
+  GalleryRoute: GalleryRoute,
+  HolidaysRoute: HolidaysRoute,
+  SafariPackagesRoute: SafariPackagesRoute,
+  TailorMadeRoute: TailorMadeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
